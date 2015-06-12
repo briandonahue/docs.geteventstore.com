@@ -152,6 +152,11 @@ To update the metadata for a stream, a `POST` should be made to the metadata res
         "data": {
             "readRole": "$all",
             "metaReadRole": "$all" 
+        },
+        "metadata": {
+            "$causationid": "a9a03400-1107-11e5-b939-0800200c9a66",
+            "$correlationid": "152c6630-1108-11e5-b939-0800200c9a66",
+            "bodyClrTypeName": "MyApp.Events.UserUpdated, MyApp.Events, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
         }
     }
 ]
