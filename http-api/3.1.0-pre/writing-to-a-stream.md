@@ -113,7 +113,12 @@ The event store also supports a custom media type for posting events `applicatio
   {
     "eventId": "fbf4a1a1-b4a3-4dfe-a01f-ec52c34e16e4",
     "eventType": "event-type",
-    "data": { "a": "1" }
+    "data": { "a": "1" },
+     "metadata": {
+       "$causationid": "a9a03400-1107-11e5-b939-0800200c9a66",
+       "$correlationid": "152c6630-1108-11e5-b939-0800200c9a66",
+       "bodyClrTypeName": "MyApp.Events.UserUpdated, MyApp.Events, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
   }
 ]
 ```
@@ -130,6 +135,10 @@ or for XML
         <Something>1</Something>
       </MyEvent>
     </Data>
+    <MetaData>
+      <!-- not sure how this is supposed to look -->
+      <correlationid>152c6630-1108-11e5-b939-0800200c9a66</correlationid>
+    </Metadata>
   </Event>
 </Events>
 ```
